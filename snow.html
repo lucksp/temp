@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="apresApp">
+<head>
+	<title></title>
+</head>
+<body ng-controller="apresController">
+
+<div ng-repeat="weather in weatherData">
+<!-- Weather Station: {{weather.}} -->
+Chance of Snow:{{weather.chanceofsnow}}% 
+<p> for Today {{weather.date}}</p>
+</div>
+</body>
+
+
+<!-- SCRIPTS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/mtnFactory.js"></script>
+  <script type="text/javascript" src="js/apresCntrlr.js"></script>
+  
+
+</html>
