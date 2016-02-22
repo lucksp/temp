@@ -12,8 +12,11 @@
 <li>Feels Like: {{weather.current_observation.feelslike_f}}</li>
 <li>Current Condition: {{weather.current_observation.weather}}</li>
 <img ng-src="{{weather.current_observation.icon_url"}}>
-<li>2 Day Forecast:</li>
-<li>Tomorrow: {{weather.forecast.simpleforecast.forecastday[0]}}</li>
+<li>Full 4 Day Forecast:</li>
+	<ul ng-repeat="forecast in weather.forecast.simpleforecast.forecastday">
+	<li>{{forecast.date.monthname}} {{forecast.date.day}}: {{forecast.conditions}}</li>
+
+	</ul>
 </ul>
 
 </div>
