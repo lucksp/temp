@@ -5,10 +5,17 @@
 </head>
 <body ng-controller="apresController">
 
-<div ng-repeat="weather in weatherData">
-<!-- Weather Station: {{weather.}} -->
-Chance of Snow:{{weather.chanceofsnow}}% 
-<p> for Today {{weather.date}}</p>
+<div>
+<ul ng-repeat="weather in weatherData">		
+<li>Ski Resort: {{weather.current_observation.display_location}}</li>
+<li>Current Temp: {{weather.current_observation.temp_f}}</li>
+<li>Feels Like: {{weather.current_observation.feelslike_f}}</li>
+<li>Current Condition: {{weather.current_observation.weather}}</li>
+<img ng-src="{{weather.current_observation.icon_url"}}>
+<li>2 Day Forecast:</li>
+<li>Tomorrow: {{weather.forecast.simpleforecast.forecastday[0]}}</li>
+</ul>
+
 </div>
 </body>
 
